@@ -1,0 +1,27 @@
+/*
+It will generate several classes such as:
+.yc-m-right_8 which gives margin-right 8 pixels.
+*/
+
+$spaceamounts: (0, 2, 4, 7, 8, 12, 20, 24, 28, 33, 36, 45, 48, 72); // Adjust this to include the pixel amounts you need.
+$sides: (top, bottom, left, right, all); // Leave this variable alone
+
+@each $space in $spaceamounts {
+  @each $side in $sides {
+    @if $side == 'all' {
+      .yc-m-#{$side}_#{$space} {
+        margin: #{$space}px !important;
+      }
+      .yc-p-#{$side}_#{$space} {
+        padding: #{$space}px !important;
+      }
+    } @else {
+      .yc-m-#{$side}_#{$space} {
+        margin-#{$side}: #{$space}px !important;
+      }
+      .yc-p-#{$side}_#{$space} {
+        padding-#{$side}: #{$space}px !important;
+      }
+    }
+  }
+}

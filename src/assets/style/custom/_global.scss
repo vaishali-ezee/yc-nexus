@@ -1,0 +1,27 @@
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow-y: hidden;
+  -webkit-text-size-adjust: 100%;
+  word-break: normal;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+}
+.yc-app {
+  font-family: $heading-font-family;
+  line-height: 1.5;
+  background-color: $text-color-white !important;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+*, ::after, ::before {
+  background-repeat: no-repeat;
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+strong {
+  font-weight: 400;
+}

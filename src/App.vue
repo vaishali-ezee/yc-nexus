@@ -1,28 +1,62 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="yc-app">
+    <login-signage
+      v-if="loginViewType() === 'signage'"
+      :env="setEnv()"
+      :language="setLanguageCode()"
+    />
+    <login-cm
+      v-if="loginViewType() === 'cm'"
+      :env="setEnv()"
+      :language="setLanguageCode()"
+    />
+    <login-pms
+      v-if="loginViewType() === 'pms'"
+      :env="setEnv()"
+      :language="setLanguageCode()"
+    />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import LoginSignage from './components/LoginSignage.vue'
+import LoginPms from './components/LoginPms.vue'
+import LoginCm from './components/LoginCm.vue'
+import './assets/style/yc-login.scss'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    LoginSignage,
+    LoginPms,
+    LoginCm,
+  },
+  props: {
+    type: {
+      type: String,
+      required: true,
+    },
+    env: {
+      type: String,
+      required: true
+    },
+    language: {
+      type: String,
+      default: 'ko'
+    }
+  },
+
+  methods: {
+    loginViewType() {
+      return this.type && typeof (this.type) !== 'undefined' ? this.type.toLowerCase().trim() : this.type
+    },
+    setEnv() {
+      return this.env ? this.env.toLowerCase().trim() : this.env
+    },
+    setLanguageCode() {
+      const languageCode = this.language ? this.language.toLowerCase().trim() : this.language
+      return (!['en', 'ko'].includes(languageCode)) ? 'ko' : languageCode
+    }
   }
 }
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>

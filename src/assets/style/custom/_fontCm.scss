@@ -1,0 +1,68 @@
+
+@font-face {
+	font-family: Noto Sans KR;
+	font-style: normal;
+	font-weight: 300;
+	src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.woff2) format("woff2"), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.woff) format("woff"), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.otf) format("opentype")
+}
+
+@font-face {
+	font-family: Noto Sans KR;
+	font-style: normal;
+	font-weight: 400;
+	src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2) format("woff2"), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff) format("woff"), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf) format("opentype")
+}
+
+@font-face {
+	font-family: Noto Sans KR;
+	font-style: normal;
+	font-weight: 700;
+	src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff2) format("woff2"), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff) format("woff"), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.otf) format("opentype")
+}
+
+$cm-body-font-family: Noto Sans KR, 'sans-serif';
+$cm-heading-font-family: $cm-body-font-family;
+
+.yc-cm-text-signup {
+  font-size: 14px;
+  line-height: 1.46;
+  color: $text-color-gray_dark !important;
+  text-decoration: underline;
+  font-weight: 400;
+  letter-spacing: -.25px;
+  font-family: $cm-heading-font-family;
+}
+  
+.yc-cm-text-heading_x-large {
+  font-size: 26px;
+  color: $text-color-gray_dark;
+  font-weight: 300;
+  line-height: 1.46;
+  letter-spacing: -.25px;
+  font-family: $cm-heading-font-family;
+}
+  
+.yc-cm-text-heading {
+  font-size: 16px;
+  color: #888;
+  line-height: 19px;
+  letter-spacing: -.25px;
+  font-family: $cm-heading-font-family;
+}
+  
+.yc-cm-button-large_title {
+  font-size: 16px;
+  color: $text-color-gray_dark;
+  letter-spacing: -.25px;
+  font-family: $cm-heading-font-family;
+}
+
+.yc-cm-text-body {
+  font-size: 12px;
+  font-family: $cm-heading-font-family;
+}
+
+.yc-cm-text_x-body {
+  font-size: 14px;
+  font-family: $cm-heading-font-family;  
+}
